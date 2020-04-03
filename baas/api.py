@@ -35,8 +35,8 @@ async def debita_account(acc_id: str, debito: Debito) -> Debito:
 
 
 @app.http(["/accounts/{acc_id}/credito"], methods=["POST"])
-@parse_path
 @parse_body(Credito)
+@parse_path
 async def credita_account(acc_id: str, credito: Credito) -> Credito:
     AccountService.credita(acc_id, credito)
     return credito

@@ -29,8 +29,8 @@ class AccountService:
     def save_account(cls, acc_id: str, acc_data: Account) -> Account:
         acc_no_banco = AccountService.get_by_id(acc_id)
         if acc_no_banco:
-            return None
-        cls.storage.save(acc_id, acc_data)
+            return acc_no_banco
+        return cls.storage.save(acc_id, acc_data)
 
     @classmethod
     def get_by_id(cls, acc_id: str) -> Optional[Account]:
