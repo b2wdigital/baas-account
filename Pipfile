@@ -15,7 +15,7 @@ mypy = "==0.630"
 black = "==18.9b0"
 isort = {extras = ["pipfile"],version = "==4.3.15"}
 baas-account = {editable = true,path = "."}
-lxml = "==4.4.1"
+lxml = "==4.6.3"
 ipdb = "*"
 
 [requires]
